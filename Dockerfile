@@ -5,6 +5,6 @@ FROM index.tenxcloud.com/tenxcloud/tomcat
 #COPY server.xml /tomcat/conf/
 #COPY fund_balance.xml /tomcat/conf/Catalina/localhost/
 
-RUN mv /tomcat/webapps/ROOT /tomcat/webapps/ROOT_bak
+RUN rm -rf /tomcat/webapps/ROOT
 
 COPY index.html /tomcat/webapps/ROOT/
